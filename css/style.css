@@ -1,0 +1,781 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Import google font*/
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700';
+</style>
+
+
+/*Typography*/
+html {
+  background-color: #f9f9f9;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  background-color: #f9f9f9;
+}
+
+/*Links*/
+a.shbox {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: #0275d8;
+  padding: 0 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+
+a.shbox:hover, a.shbox:focus {
+  outline: none;
+  outline-offset: 0;
+  text-decoration: none;
+  color: #2311FA;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+a.shbox:visited {
+  color: #1001CC;
+}
+
+
+/*Headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    color: #0C0B12;
+    font-weight: bold;
+}
+
+
+
+.header-bar {
+  position: fixed;
+  height: 120px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.header-left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10;
+}
+
+.header-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+#logo-div {
+  margin: auto 3vw;
+  z-index: 10;
+  font-size: 32px;
+}
+
+#logo {
+  font-size: 1.0em;
+  background: #f9f9f9;
+  color: #0275d8;
+}
+
+
+/***********************/
+/*** NAVIGATION MENU ***/
+/***********************/
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #9aa1ad; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 120px; /* Place content 120px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f9f9f9;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #092A57;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#everything {
+    transition: margin-right .5s;
+}
+
+
+
+
+/**********************/
+/*** HAMBURGER MENU ***/
+/**********************/
+#hamburger-div {
+  margin: 2vw;
+  z-index: 10;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+
+.c-hamburger {
+  position: relative;
+  float: right;
+  overflow: hidden;
+  margin: auto;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 36px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: #0C0B12;
+  z-index: 10;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #0C0B12;
+  content: "";
+  z-index: 10;
+}
+
+.c-hamburger span::before {
+  top: -15px;
+  z-index: 10;
+}
+
+.c-hamburger span::after {
+  bottom: -15px;
+  z-index: 10;
+}
+
+.c-hamburger-htra {
+  background-color: transparent;
+  z-index: 10;
+}
+
+.c-hamburger-htra span {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.c-hamburger-htra span::before {
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
+          transition: transform 0.3s, width 0.3s, top 0.3s;
+  z-index: 10;
+}
+
+.c-hamburger-htra span::after {
+  -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
+          transition: transform 0.3s, width 0.3s, bottom 0.3s;
+  z-index: 10;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger-htra.is-active {
+  background-color: transparent;
+  z-index: 10;
+}
+
+.c-hamburger-htra.is-active span {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 10;
+}
+
+.c-hamburger-htra.is-active span::before,
+.c-hamburger-htra.is-active span::after {
+  width: 50%;
+  z-index: 10;
+}
+
+.c-hamburger-htra.is-active span::before {
+  top: 0;
+  -webkit-transform: translateX(-8px) translateY(4px) rotate(-45deg);
+      -ms-transform: translateX(-8px) translateY(4px) rotate(-45deg);
+          transform: translateX(-8px) translateY(4px) rotate(-45deg);
+  z-index: 10;
+}
+
+.c-hamburger-htra.is-active span::after {
+  bottom: 0;
+  -webkit-transform: translateX(-8px) translateY(-4px) rotate(45deg);
+      -ms-transform: translateX(-8px) translateY(-4px) rotate(45deg);
+          transform: translateX(-8px) translateY(-4px) rotate(45deg);
+  z-index: 10;
+}
+
+
+.page {
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+.main {
+  font-size: 36px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-block {
+  width: 100%;
+}
+
+.main-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-text {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+#mugshot-container {
+  height: 250px;
+  width: 250px;
+  background: transparent;
+}
+
+#mugshot {
+  width: 100%;
+  height: auto;
+  box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+#mugshot:hover {
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
+}
+
+.about-page {
+  height: 100%;
+  width: 100%;
+}
+
+.page-header {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+}
+
+.page-header h1,
+.page-header h2 {
+  margin-bottom: 0;
+}
+
+#info-container h1 {
+  font-size: 0.9em;
+}
+
+#info-container #name {
+  font-size: 1.3em;
+}
+
+#resume-btn {
+  font-size: 0.8em;
+}
+
+
+/******************/
+/**** TERMINAL ****/
+/******************/
+.terminal-container {
+  margin: 0.5em;
+}
+
+#run-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 8px;
+  border-color: grey;
+  background-color: #E0E8F0;
+  color: #30353A;
+  font-size: 0.8em;
+  outline: none;
+}
+
+#run-btn:hover {
+  background-color: #C2C7CC;
+}
+
+.terminal-window {
+  text-align: left;
+  width: 100%;
+  height: 80vh;
+  border-radius: 8px;
+  margin: auto;
+  position: relative;
+  box-shadow: 5px 5px 30px 3px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-window header {
+  background: #E0E8F0;
+  height: 30px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  color: black;
+}
+
+.terminal-window header .button {
+  width: 14px;
+  height: 14px;
+  margin: 8px 0;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.terminal-window header .button.red {
+  margin-left: 10px;
+  background: #E75448;
+}
+
+.terminal-window header .button.yellow {
+  background: #E5C30F;
+  margin-left: 34px;
+}
+
+.terminal-window header .button.green {
+  background: #3BB662;
+  margin-left: 58px;
+}
+
+.terminal-window header .terminal-name {
+  color: black;
+  font-size: 16px;
+  margin: auto;
+}
+
+.terminal-window section.terminal {
+    color: #18de36;
+    font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+    font-size: 12px;
+    background-color: #30353A;
+    padding: 3px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    bottom: 0;
+    border-radius: 0 0 8px 8px;
+    overflow: auto;
+}
+
+.terminal-window section.terminal p {
+    margin: -20px 0;
+}
+
+.terminal-text {
+    height: 100%;
+}
+
+form {
+  height: 100%;
+}
+.terminal-textarea {
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 14px;
+  line-height: 14px;
+  color: #18de36;
+  background-color: #30353A;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+#output {
+
+}
+
+
+/*******************/
+/**** Portfolio ****/
+/*******************/
+.portfolio-page {
+  width: 100%;
+  height: 100%;
+}
+
+#portfolio .portfolio-item {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+#portfolio .portfolio-item img {
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 100%;
+}
+
+#proj-this-website {
+  width: 100%;
+}
+
+
+/*set the portflio link a as a block and center to the portfolio item container*/
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+
+/*set the caption in default mode*/
+#portfolio .portfolio-item .portfolio-link .caption {
+  display: center;
+  position: absolute;
+  border-radius: 10px;
+  opacity: 0;
+  background: rgba(24, 222, 54, 0.8);
+  outline: none;
+  /*    adjust the color of roll over effect*/
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+/*set the opacity of caption*/
+#portfolio .portfolio-item .portfolio-link .caption:hover {
+  opacity: 1;
+  box-shadow: 5px 5px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*set the caption content, such as icon or title*/
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    /* adjust the top value if you want to show the name of title*/
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+.project-title {
+  margin-top: 10px;
+}
+
+.more-readable {
+  text-shadow: 5px 0px 15px rgba(24, 222, 54, 0.8),
+              -5px 0px 15px rgba(24, 222, 54, 0.8),
+              0px 5px 15px rgba(24, 222, 54, 0.8),
+              0px -5px 15px rgba(24, 222, 54, 0.8);
+}
+
+
+
+/***************/
+/**** Modal ****/
+/***************/
+.portfolio-modal .modal-content {
+    color: black;
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /*Change the background-color*/
+    background-color: rgba(255,255,255,1.0);
+}
+
+.portfolio-modal .modal-content h2 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.portfolio-modal .modal-content p {
+  margin-bottom: 20px;
+  font-size: 0.6em;
+}
+
+.portfolio-modal .modal-content img {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: 0.3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    /*Line color*/
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    /*Line color*/
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+.tech-icons {
+  display: inline-block;
+}
+
+.tech-icons h5 {
+  margin: 0;
+  padding: 0;
+}
+
+#html-icon,
+#css-icon,
+#js-icon,
+#bootstrap-icon {
+  margin: 5px;
+  height: 50px;
+  width: auto;
+}
+
+#cpp {
+  height: 50px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+#boost {
+  height: 50px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+#github-logo {
+  width: 50px;
+  height: auto;
+  margin: auto 0;
+  padding: 0;
+}
+
+#coming-soon {
+  text-align: center;
+}
+
+.pad-btn-top {
+  margin-top: 25px;
+}
+
+
+
+/*****************/
+/**** Contact ****/
+/*****************/
+.contact {
+  background: #025aa5;
+
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  border: 1px;
+  border-color: #01549b;
+  border-radius: 10px;
+}
+#contact-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contact-buttons {
+  z-index: 1111;
+  text-align: center;
+  outline: none;
+}
+
+#input-name,
+#input-email,
+#input-message {
+  border-color: silver;
+}
+
+#input-message {
+  width: 100%;
+  font-size: 0.5em;
+  border-radius: 4px;
+}
+
+#input-submit {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 0.7em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: #f9f9f9;
+}
+
+#pgp-pub-key {
+  margin: 0;
+}
+
+#pgp-pub-key-p {
+  font-size: 0.3em;
+  padding: 12px 0;
+  margin: 0;
+  color: #f9f9f9;
+}
+
+
+.footer-content {
+  padding-top: 70px;
+  padding-bottom: 10px;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/***********************/
+/**** Media Queries ****/
+/***********************/
+@media (max-width: 544px) {
+  #mugshot-container {
+    margin: 90px auto auto auto;
+  }
+
+  #info-container {
+    margin: auto;
+    text-align: center;
+  }
+}

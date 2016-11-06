@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Basic Page Needs––––––––––––––––––––––––––– -->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ian Duvall | Software Engineer</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+    <!-- Custom CSS ––––––––––––––––––––––––––– -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts ––––––––––––––––––––––––––– -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+
+    <!-- Favicon––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./img/favicon.ico">
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact-header">Contact</a>
+        <a href="https://github.com/ianduvall">Github</a>
+        <a href="https://twitter.com/ianwmduvall">Twitter</a>
+        <a href="mailto:iduvall@umich.edu">Email</a>
+    </div>
+
+    <div id="everything">
+    <!-- Header -->
+    <div class="header-bar">
+        <div class="header-left">
+            <div id="logo-div">
+                <a class="shbox" id="logo" href="#home">Ian Duvall</a>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <div id="hamburger-div">
+                <button class="c-hamburger c-hamburger-htra">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+    <!-- End Header -->
+        
+    
+    <!-- Main Page -->
+    <div class="page" id="home">
+        <div class="container-fluid main">
+            <div class="main-block">
+                <!--left part-->
+                <div class="col-sm-6 col-xs-12">
+                    <div class="main-img">
+                        <div id="mugshot-container">
+                            <img src="img/me.jpg" class="img-circle" id="mugshot">
+                        </div>
+                    </div>
+                </div>
+
+                <!--right part-->
+                <div class="col-sm-6 col-xs-12">
+                    <div class="main-text">
+                        <div id="info-container">
+                            <h1 id="name">Ian Duvall</h1>
+                            <h1>University of Michigan</h1>
+                            <h1>BSE Computer Science</h1>
+                            <a class="btn btn-primary" id="resume-btn" href="files/Ian_Duvall_Resume.pdf">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Page -->
+
+    <!-- ABOUT PAGE -->
+    <div class="page" id="about">
+        <div class="container-fluid about-page">
+        <h1 class="page-header">Ask IanBot to learn more about me!</h1>
+
+        <div class="terminal-container">
+            <div class="col-sm-7 col-xs-12">
+                <div class="terminal-window">
+                    <header>
+                        <div class="button green"></div>
+                        <div class="button yellow"></div>
+                        <div class="button red"></div>
+                        <div class="terminal-name">IanBot</div>
+                    </header>
+                    <section class="terminal">
+                        <div class="terminal-text">
+                            <form>
+<p hidden id="hiddenPython">
+indent = '\t'
+
+class IanBot:
+    brief = {
+        'Hometown': "Leland, MI",
+        'High School': "Leland Public School",
+        'College': "University of Michigan",
+        'Standing': "Senior",
+        'Major': "Computer Science Engineering",
+        'Graduation Date': "May 2017"
+    }
+
+    favoriteColor = 'Fav Color: draw between Maize and Blue'
+    favoriteNumber = 'Fav #: 3'
+    favoriteMovie = 'Fav Movie: Inception'
+    favoriteSport = 'Fav Sport: Basketball'
+    twitter = 'Twitter: @ianwmduvall'
+    email = 'Email: iduvall@umich.edu'
+    resume = 'Resume: IanDuvallResume.pdf'
+
+    def tellMeAboutIan():
+        print "Hello! Here's a few things I know about Ian."
+        count = 0
+        for i in IanBot.brief:
+            if count == 10:
+                break
+            else:
+                count += 1
+                print "{}{}: {}".format(indent, i, IanBot.brief[i])
+
+</p>
+<textarea class="terminal-textarea" id="yourcode">
+# This console runs Python in the browser
+# IanBot is a Python class with information about me
+# Try asking IanBot something! I've put some code to get you started...
+# To see what's in IanBot, try printing dir(IanBot)
+
+IanBot.tellMeAboutIan()
+print IanBot.favoriteMovie
+print IanBot.favoriteSport
+print IanBot.twitter
+print "GO BLUE!"
+
+</textarea>
+                            </form> 
+                        </div>
+                    </section>
+                    <button type="button" class="btn btn-lg btn-primary" id="run-btn" onclick="runit()">
+                        <i class="fa fa-play" id="play-icon" aria-hidden="true"></i>
+                        Run</button>
+                </div>
+            </div>
+
+            
+            <div class="col-sm-5 col-xs-12">
+                <div class="terminal-window">
+                    <header>
+                        <div class="button green"></div>
+                        <div class="button yellow"></div>
+                        <div class="button red"></div>
+                        <div class="terminal-name">Console</div>
+                    </header>
+                    <section class="terminal">
+                        <div class="terminal-text">
+                            <form> 
+                                <textarea class="terminal-textarea" id="output">Click the run button to learn more about me!
+                                </textarea>
+                            </form> 
+                        </div>
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="page" id="portfolio">
+        <div class="container-fluid portfolio-page">
+            <div class="page-header">
+                <h1>Explore my recent work!</h1>
+            </div>
+            
+            <div class="col-md-6 col-sm-12 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <h1 class="more-readable text-center">
+                                Satellite Remote Sensing Library
+                            </h1>
+                            <h1><i class="fa fa-expand" aria-hidden="true"></i></h1>
+                        </div>
+                    </div>
+                    <img src="./img/satellite.jpg" class="img-fluid img-rounded center-block" alt="">
+                </a>
+            </div>
+            <!--            end of portfolio item-->
+
+            <div class="col-md-6 col-sm-12 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <h1 class="more-readable text-center">
+                                ARTDES 193 Project
+                            </h1>
+                            <h1><i class="fa fa-expand" aria-hidden="true"></i></h1>
+                        </div>
+                    </div>
+                    <img src="./img/website.png" class="img-fluid img-rounded center-block" alt="">
+                </a>
+            </div>
+            <!--            end of portfolio item-->
+            <div id="coming-soon">
+                <h2>More projects coming soon...</h2>
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- End Portfolio Section -->
+
+
+<!-- Portfolio Modals -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="modal-body">
+                    <div class="col-xs-6">
+                        <img src="./img/satellite.jpg" class="img-responsive img-centered" class="img-fluid img-rounded center-block" alt="">
+                    </div>
+                    <!-- end of left part-->
+                    <div class="col-xs-6">
+                        <h2>Satellite Remote Sensing Library</h2>
+                        <p>I am a member of a University of Michigan Multidisciplinary Design Team that is building a standard interface template library for satellite image processing research. I built the standard interface template layer that takes advantage of Object Oriented Programming as well as design patterns like the Abstract Factory pattern. The standard interface layer abstracts the different implementations that are necessary when working with multiple data format types.</p>
+                        <div class="col-xs-6 no-padding">
+                            <div class="tech-icon">
+                                <h5>Technology:</h5>
+                                <img id="cpp" src="img/cpp-icon.png">
+                                <img id="boost" src="img/boost-icon.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 no-padding">
+                            <a href="https://github.com/ianduvall/geosci" class="btn btn-primary pull-xs-right pad-btn-top">
+                                View on GitHub
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--                    end of right part-->
+                </div>
+                <!--                end of modal body-->
+            </div>
+            <!--            end of row-->
+        </div>
+        <!--        end of container-->
+    </div>
+    <!--    end of modal content-->
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="modal-body">
+                    <div class="col-xs-6">
+                        <img src="./img/website.png" class="img-responsive img-centered" class="img-fluid img-rounded center-block" alt="">
+                    </div>
+                    <!-- end of left part-->
+                    <div class="col-md-6">
+                        <h2>ARTDES 193 Project</h2>
+                        <p>This website was started as a project for a class at the University of Michigan's Art and Design School. This project focused primarily on front-end development which was my first formal introduction to the depths of HTML and CSS. Designing this website has shown me how front-end development is really an art form and I realized that I enjoy working on both the front-end and back-end. This is just the beginning of the development of this site so check back in future for cool updates!</p>
+                        <div class="col-md-6 col-xs-12 no-padding">
+                            <div class="tech-icons">
+                                <h5>Technology:</h5>
+                                <img id="html-icon" src="img/html-icon.png">
+                                <img id="css-icon" src="img/css-icon.png">
+                                <img id="js-icon" src="img/js-icon.png">
+                                <img id="bootstrap-icon" src="img/bootstrap-icon.png">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 no-padding">
+                            <a href="https://github.com/ianduvall/website" class="btn btn-primary pull-xs-right pad-btn-top">
+                                View on GitHub
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--                    end of right part-->
+                </div>
+                <!--                end of modal body-->
+            </div>
+            <!--            end of row-->
+        </div>
+        <!--        end of container-->
+    </div>
+    <!--    end of modal content-->
+</div>
+<!--end of portfolio modal-->
+
+    <div id="contact-header">
+        <h1>Tell me what you think</h1>
+    </div>
+    
+    <div class="contact-buttons">
+        <button class="btn btn-primary" id="contact-normal-btn" type="button" data-toggle="collapse" data-target="#contact-normal" aria-expanded="true" aria-pressed="true" aria-controls="contact-normal">
+            Leave Message
+        </button>
+        <button class="btn btn-primary" id="pgp-button" type="button" data-toggle="collapse" data-target="#pgp-pub-key" aria-expanded="false" aria-controls="pgp-pub-key">
+            PGP Public Key
+        </button>
+    </div>
+    <div class="contact">
+        <div class="container-fluid">
+            <div class="collapse" id="pgp-pub-key">
+                <p id="pgp-pub-key-p">
+-----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+<br>
+mQINBFgKPv0BEADPFsxmWblfatHT1fYodzqLyOMJMmP3I9On9ONTUcmmGyGNsbpd
+CFOZBwKmFNzLcrjvhgQbpBmOWB5wxm1SBELaBufhWEeSyKJ4ya0lT5eOtMs4BikQ
+ddeLHg42Y+BGOZ/4NB+m+jjLQ9BcIVwsxfomdrjcRM5qELyfABlnBZCIXUeJoPps
+ntMpsuUzjiPLxwsp98Dck4ezYvQXb0ClGr8oKIHP0+lrGaRXZBZAEhXSvEzALqVF
+r/VoKWWn5I1Lj5bt8novKzZIEeys/v6+9Al8zz4YZ1Edig6ssZt4qGjKf1OQWjiJ
+gyTCJln1AlVQAKknw4WuSqsICdXnwQSetK7d62ji5aK2dGuBWa42XtvzlwHcukdk
++VwzK/itJbXysTM4fU/D+vrxZISCA6EEdtjlccbuc0eXtatdC1byI1CBWRoK4eN1
+YZfFJfbtbnX11vTr625na5Ex7nh0PuRVZ5JAQ27WcbN0K2f+LLyPGvhLoK136HH5
+BCOFFWxiYBQKTx8xJ9c+HjoeFXct0JBLbCYu/rdIeTdGzBJT3nTJeluy0Y3y1xRj
+4XI7x3lxlHjMy5tJfP5Ns8Bi+sy2t+zNAoh4LIkBymGp0ZCLU/IA1iRbZVfkhzQY
+p0M5rSuR6NL/uQ2kfaYZIIpNcSDEUmFD5byznLm7JwEaA/Duad9SvO6MKQARAQAB
+tB5JYW4gRHV2YWxsIDxpZHV2YWxsQHVtaWNoLmVkdT6JAj0EEwEKACcFAlgKPv0C
+GwMFCQYD2AAFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AACgkQ5bfweNR387zRnRAA
+yoAniVwzHL2JuIfUgBsCZL62M8XmbRd9yDyAlHSRQQ675jpwCnCu8itUgurcQnd0
+Z1Yk1J4ZihPJjdm4MNTjPWf6wrp1YWY7hCkzVmyg1Tp9dPRnXsyhp10Mj/d5bX/E
+0W0Oo2uH3Cxh6pKm+ByHzGcqfJD1ZETj2qdF4hrMP5PMLHMx6E5qt/eUC6MdqZvg
+JOnk7wyTIZI5tBITIDNqS9CbWv8VtIuj1odIyE4T45SRPHRHMNN2EUJKHmAkDIjT
+ocoMA3yvHpaxOc2KJWWPuwEUjlaUzdZ1wdjJequRETmWAivVxDdFhmMOWLWOE+yJ
+5bJjDRtyG5naYWSncVDPCbKHZH6Msh0y9ydEahZWBfTTVsjLW3NC1tcNFWXZMj2+
+l0vjNzWLDXSWa+poY/rtlAbc1mQnIAbAo6lc5GdepOOTFlVkKdFx//1NQVMfRyFw
+n7eVxKp11rDvY8zJqYXfkoRV2Cs/ctapAnDgRiZtOEGuwTvLxU32uQovO9EOBVV5
+1teqajIQY//IQb8n1Ofn6QIYvKPyNSVoEtZ58vOCTRgTx/GnSwooWlMHSiZfC2Kh
+RfPBSthMYobRV6vVx1e6FWhC1zimiwyIlWPYWEL6n06awXYl3XiMbd8bRngjnEE7
+xmEaqWCfENgEQ7DiebA1okBeTVXugAw8EoCzW9ATQ+i5Ag0EWAo+/QEQALXjsRHS
+Y70uP3jkFgA2gejzHXJ0vwF+vb65Onfl7OvWSxawt2QyD6UC2yxn/Ui64EQhXlTa
+F4jP1pVR8inkmM9zslEJcA3Di/9ugrhxzdvHvMWUTuJ1BputPi8dca4YCHtGSApk
+eMlYOsUKzZL6/C5j/b8PPiJMRuQMUXiuQs4c5ArZ7jCl6y0d8CvoMUahRtK+9wXR
+cDADmEbMx+KqzBTXqEwYRFLoAKMfOgcZcau1hcso/v04l2esN0+sZwCIm+q1f30W
+RypeCYC8iV8PhT8fwUrdVUGn/5Iyjw0hmEPHUAWjzxzHHsAsCkePhQSTnUo5HUax
+7UBQvXmvW3ulHbKSrS8XJC/KDpI2Qu85zWy/7Sh4xNFSTf/wL9YzC3yFSI8QynF1
+lF5SkpkmsEexBUlAbX0I91B34Ick9Ed1Dsf40ksIjX9DyE+cC36Ibad24AhgFkij
+7UvaMU7ozs4Fo26jXXcMMzZ9gDWaLGCnujKiPk3p0jzyEFqAjKb10/aZR35GqBse
+dkwecXYLomrrsMMb0F0KlufT9PYNer9Sukoss5hzwUUQDSzAgkD9CWnoOek2qCYK
+d1eFnH4oHMjnqmkY+vS3N14490p+4kA5ndYBTQIVrzuaXg338AeWlfacfkx2kL4m
+jeljHpeEgrqpKqWsJ4ookzKXxSIIWCkGAofFABEBAAGJAiUEGAEKAA8FAlgKPv0C
+GwwFCQYD2AAACgkQ5bfweNR387x++A/+KOb379eLCr6Q1zaClqIsJFCrJhUFglfZ
+P1OVmHqMDsC2BXJwSxhpSe6p/UauFLDj0qDk5BdnIaIzJ+xTvLZ4iJLnm/NMEP0a
+mgj+Q6YPs8qOCTFS6jnfIOY0qtGZqIW8sUoMStrh4n66eVAVPe1zNXNoOnATJxjM
+8KKnjUVgvhENDVbNoHI/Kjt3VVjaIWprAX7tqkzkWXaaw+H/sGLzbCc7muJ0E4C2
+Vp0q1HtspTdxtnxw1yhGuFuQE79WFWokvwxqaqB7FU3syV8hcfWahWr5DmHzKoLh
+4W67yINd7RABJVy1qLsU0BUcnPkD9b5Nhjl9BkVJQs/X1ZeqoBQQ2XWa4Yn78Ar5
+g/BAOYvm5oRJGAy45R0A0QULMeYpBNYt7Ab8KD15qvhQVr3yWroIcAFXfvrhr4YM
+ejvlH7+Hz3cIN8rU8lo5UhwmyLapFPj7rgsD3AKYq8DwN3kihNZeke+Es+kmOOx9
+8zsNI1AoTYH76zxEM+A8RkpSufow9mtFe91zHWf8Zn0qp4Piow4EgoFI5p869Zl9
+WL9bFZl6NWz1/TML3BOvBSZQALI9Hg6EzmTRI+kCrMtASNWy4yzpSXJ1mCbJeNMb
+y6xrgjZ23wJNmg2hOBBsbq65PLcf3NMcDts3huHB4QReNdim0mpVfvu1aoO+TbWn
+251mU6tGyws=
+=YpCu<br>
+<br>
+-----END PGP PUBLIC KEY BLOCK-----
+                </p>
+            </div>
+
+
+            <div class="collapse in" id="contact-normal">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label class="form-label" for="input-name">Name</label>
+                            <input type="text" class="form-control" id="input-name" placeholder="Enter name">
+                        </div>
+                        <div class="col-xs-6">
+                            <label class="form-label" for="input-email">Email</label>
+                            <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+
+                        <div class="col-xs-12">
+                            <label class="form-label" for="input-message">Message</label>
+                            <div>
+                                <textarea class="control-form" name="message" type="text" id="input-message" placeholder="Enter message" rows="5"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-block" id="input-submit">Submit</button>
+                        </div>
+                        
+                    </div>
+
+                    
+                </form>
+            </div>
+
+            
+        </div>
+        
+    </div>
+
+
+    <!-- Footer Content -->
+    <footer>
+        <div class="footer-content">
+            <p>© Ian Duvall 2016. All Rights Reserved. Designed and Developed by <a target="_blank" href="https://twitter.com/ianwmduvall">Ian Duvall</a>.</p>
+        </div>
+    </footer>
+
+
+
+
+<!-- Plugin JavaScript -->
+<!-- <script src="js/classie.js"></script> -->
+<!-- <script src="js/cbpAnimatedHeader.min.js"></script> -->
+
+<!-- Custom Theme JavaScript -->
+<!-- <script src="js/freelancer.js"></script> -->
+
+
+
+    </div> <!-- end of everything div -->
+    
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+
+    <script>
+      (function() {
+
+        "use strict";
+
+        var toggles = document.querySelectorAll(".c-hamburger");
+
+        for (var i = toggles.length - 1; i >= 0; i--) {
+          var toggle = toggles[i];
+          toggleHandler(toggle);
+        };
+
+        function toggleHandler(toggle) {
+          toggle.addEventListener( "click", function(e) {
+            e.preventDefault();
+            if (this.classList.contains("is-active") === true) {
+                this.classList.remove("is-active");
+                closeNav();
+            }
+            else {
+                this.classList.add("is-active");
+                openNav();
+            }
+          });
+        }
+
+      })();
+    </script>
+
+<!--    !!!!!!!
+I am trying to embed a python interpretter in my website.
+Below is Skulpt, some code to do that. 
+        !!!!!!!     -->
+<!-- SKULPT -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
+    <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script> 
+    <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script> 
+
+    <script type="text/javascript"> 
+    // output functions are configurable.  This one just appends some text to a pre element.
+
+    function outf(text) { 
+        var mypre = document.getElementById("output");
+        mypre.innerHTML = mypre.innerHTML + text;
+    } 
+    function builtinRead(x) {
+        if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                throw "File not found: '" + x + "'";
+        return Sk.builtinFiles["files"][x];
+    }
+    // Here's everything you need to run a python program in skulpt
+    // grab the code from your textarea
+    // get a reference to your pre element for output
+    // configure the output function
+    // call Sk.importMainWithBody()
+    function runit() { 
+       var prog = document.getElementById("hiddenPython").innerHTML + document.getElementById("yourcode").value;
+       console.log(prog);
+       var mypre = document.getElementById("output"); 
+       mypre.innerHTML = ''; 
+       Sk.pre = "output";
+       Sk.configure({output:outf, read:builtinRead}); 
+       (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+       var myPromise = Sk.misceval.asyncToPromise(function() {
+           return Sk.importMainWithBody("<stdin>", false, prog, true);
+       });
+       myPromise.then(function(mod) {
+           console.log('success');
+       },
+           function(err) {
+           console.log(err.toString());
+       });
+    }
+    </script>
+
+    <script type="text/javascript" src="js/caption2.js"></script>
+
+    <script type="text/javascript">
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            if (window.matchMedia('(min-width: 768px)').matches) {
+                document.getElementById("mySidenav").style.width = "200px";
+                document.getElementById("everything").style.marginRight = "200px";
+            }
+            else {
+                document.getElementById("mySidenav").style.width = "100%";
+            }
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("everything").style.marginRight = "0";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
